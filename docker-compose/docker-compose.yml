@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+
+  webserver:
+    image: dockerintro/nginx
+    # TODO This image does not exist.
+    depends_on:
+      - application
+    # TODO Forward port 80 of the host to port 80 of the webserver container
+    
+  application:
+    image: dockerintro/myapp
+    # TODO This image does not exist.
+
+# TODO Create a common network for the webserver and the app to communicate
+# TODO use "driver: bridge" for the network definition
+# TODO Put both containers on the network you create
